@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mugorithm/model/User.dart';
 
 class MyMusicPage extends StatefulWidget {
   const MyMusicPage({Key? key}) : super(key: key);

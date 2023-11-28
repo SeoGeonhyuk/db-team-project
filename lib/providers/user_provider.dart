@@ -15,14 +15,20 @@ class UserProvider extends ChangeNotifier {
 
     // 서버로 데이터 전송 (여기를 수정 해야함)
     /*
-    final response = await http.post(Uri.parse(_userApi), body: {
-      'email': email,
-      'password': password,
-    });
-    if (response.statusCode == 200) { // 유저 존재
-      _user = user;
-    } else { // 유전 존재 안함
-      _user = null;
+    try {
+      final response = await http.post(Uri.parse(_userApi), body: {
+        'email': email,
+        'password': password,
+      });
+      if (response.statusCode == 200) {
+        // 유저 존재
+        _user = user;
+      } else {
+        // 유전 존재 안함
+        _user = null;
+      }
+    } catch (e) {
+      print('오류 발생 : $e');
     }
     */
 

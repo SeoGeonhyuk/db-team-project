@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mugorithm/page/login_page.dart';
+import 'package:mugorithm/providers/music_provider.dart';
 import 'package:mugorithm/providers/user_provider.dart';
 import 'package:provider/provider.dart';
 
@@ -8,6 +9,7 @@ void main() {
     MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (context) => UserProvider()),
+        ChangeNotifierProvider(create: (context) => MusicProvider()),
       ],
       child: const MyApp(),
     ),
